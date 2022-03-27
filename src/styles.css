@@ -1,16 +1,19 @@
 .App {
-    font-family: sans-serif;
-    text-align: center;
-  }
-  h1 {
-    background-color: coral;
-    font-family: Comic Sans MS;
-  }
-  
-  input {
-    width: 80%;
-    padding: 1.5rem;
-  }
-  body {
-    background-color: cornflowerblue;
-  }
+  font-family: sans-serif;
+  text-align: center;
+}
+h1 {
+  background-color: coral;
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 1rem;
+  font-family: Comic Sans MS;
+}
+
+input {
+  width: 60%;
+  padding: 1.5rem;
+}
+body {
+  background-color: cornflowerblue;
+}
