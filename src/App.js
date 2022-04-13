@@ -15,18 +15,17 @@ const flagDictionary = {
 var flagsWeKnow = Object.keys(flagDictionary); //converting object to array
 
 export default function App() {
-  const [answer, setAnswer] = useState("");
+  const [answer, setAnswer] = useState(""); //useState is a Hook that allows you to have state variables in functional components.
 
-  function flagInputHandler(event) {
-    var userInput = event.target.value;
-    var answer = flagDictionary[userInput];
+  function flagInputHandler(event) {  //entering emoticon in search bar
+    var userInput = event.target.value;  //getting the input
+    var answer = flagDictionary[userInput]; //checking the dictionary for the answer
 
     if (answer === undefined) {
       answer = "We don't have this in our database";
     }
 
     setAnswer(answer);
-    // console.log(answer);
   }
 
   function flagClickHandler(flag) {
