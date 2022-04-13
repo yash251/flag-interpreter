@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./styles.css";
 
-const flagDictionary = {
+const flagDictionary = {  //database
   "🇨🇦": "Canada",
   "🇧🇷": "Brazil",
   "🇮🇳": "India",
@@ -22,13 +22,13 @@ export default function App() {
     var answer = flagDictionary[userInput]; //checking the dictionary for the answer
 
     if (answer === undefined) {
-      answer = "We don't have this in our database";
+      answer = "We don't have this in our database";  //default
     }
 
     setAnswer(answer);
   }
 
-  function flagClickHandler(flag) {
+  function flagClickHandler(flag) {  //function for clicking on known flags
     var answer = flagDictionary[flag];
     setAnswer(answer);
   }
@@ -40,7 +40,7 @@ export default function App() {
         onChange={flagInputHandler}
         placeholder="Enter a flag emoticon"
       ></input>
-      <h2> {answer} </h2>
+      <h2> {answer} </h2>  {/* displaying answer */}
       <h3> Flags we know </h3>
       {flagsWeKnow.map(function (flag) {
         return (
